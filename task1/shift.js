@@ -1,0 +1,23 @@
+export default function caesar(str, shift, action) {
+  shift = shift % 26;
+  if (action === 'decode') {
+    shift = 26 - shift;
+  }
+  if (shift < 0) {
+    return caesar(str, shift + 26);
+  }
+  let output = '';
+  for (let i = 0; i < str.length; i++) {
+    let c = str[i];
+    if (c.match(/[a-z]/i)) {
+      const code = str.charCodeAt(i);
+      if (code >= 65 && code <= 90) {
+        c = String.fromCharCode(((code - 65 + shift) % 26) + 65);
+      } else if (code >= 97 && code <= 122) {
+        c = String.fromCharCode(((code - 97 + shift) % 26) + 97);
+      }
+    }
+    output += c;
+  }
+  return output;
+}
