@@ -15,9 +15,10 @@ CLI tool accept 4 options (short alias and full name):
 3.  **-o, --output**: an output file
 4.  **-a, --action**: an action encode/decode
 
-**Details:**
-
-For command-line arguments is used - [https://www.npmjs.com/package/commander](https://www.npmjs.com/package/commander)
+Options description:
+```bash
+$ node task1 --help
+```
 
 **Usage example:**
 
