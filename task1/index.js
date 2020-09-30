@@ -1,6 +1,6 @@
-import commander from 'commander';
-import setOption from './option.js';
-import setActionHandler from './action.js';
+const commander = require('commander');
+const setOption = require('./option.js');
+const setActionHandler = require('./action.js');
 
 setOption(commander.program)
   .action(setActionHandler)

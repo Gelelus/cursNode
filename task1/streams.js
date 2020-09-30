@@ -1,9 +1,8 @@
-import { Transform, Writable } from 'stream';
-import caesarShift from './shift.js';
-import fs from 'fs';
-// import reader from 'readline-sync';
+const { Transform, Writable } = require('stream');
+const caesarShift = require('./shift.js');
+const fs = require('fs');
 
-export default class Stream {
+module.exports = class Stream {
   constructor() {}
 
   static getReadbleStream(inputCommand) {
@@ -58,4 +57,4 @@ export default class Stream {
 
     return fs.createWriteStream(outputCommand);
   }
-}
+};

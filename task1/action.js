@@ -1,7 +1,7 @@
-import Stream from './streams.js';
-import { pipeline } from 'stream';
+const Stream = require('./streams.js');
+const { pipeline } = require('stream');
 
-export default function setActionHandler(command) {
+module.exports = function setActionHandler(command) {
   const readbleStream = Stream.getReadbleStream(command.input);
   const transformStream = Stream.getTransformStream(
     command.shift,
@@ -20,4 +20,4 @@ export default function setActionHandler(command) {
       console.log('Pipeline succeeded');
     }
   });
-}
+};

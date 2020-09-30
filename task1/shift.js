@@ -1,4 +1,4 @@
-export default function caesar(str, shift, action) {
+module.exports = function caesar(str, shift, action) {
   shift = shift % 26;
   if (action === 'decode') {
     shift = 26 - shift;
@@ -20,4 +20,4 @@ export default function caesar(str, shift, action) {
     output += c;
   }
   return output;
-}
+};
