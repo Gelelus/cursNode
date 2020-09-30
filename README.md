@@ -17,7 +17,7 @@ CLI tool accept 4 options (short alias and full name):
 
 **Details:**
 
-For command-line arguments used - [https://www.npmjs.com/package/commander](https://www.npmjs.com/package/commander)
+For command-line arguments is used - [https://www.npmjs.com/package/commander](https://www.npmjs.com/package/commander)
 
 **Usage example:**
 
