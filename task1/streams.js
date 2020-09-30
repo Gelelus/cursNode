@@ -55,6 +55,6 @@ module.exports = class Stream {
       return new WritableStream({ highWaterMark: 2 });
     }
 
-    return fs.createWriteStream(outputCommand, { flags: "ax" });
+    return fs.createWriteStream(outputCommand, { flags: "a" });
   }
 };

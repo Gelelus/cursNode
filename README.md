@@ -26,11 +26,11 @@ $ node task1 -a encode -s 7 -i "./input.txt" -o "./output.txt"
 ```
 
 ```bash
-$ node task1 --action encode --shift 7 --input plain.txt --output encoded.txt
+$ node task1 --action encode --shift 7 --input input.txt --output output.txt
 ```
 
 ```bash
-$ node task1 --action decode --shift 7 --input decoded.txt --output plain.txt
+$ node task1 --action decode --shift 7 --input input.txt --output output.txt
 ```
 
 > input.txt
