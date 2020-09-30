@@ -1,16 +1,16 @@
-const { Transform, Writable } = require('stream');
-const caesarShift = require('./shift.js');
-const fs = require('fs');
+const { Transform, Writable } = require("stream");
+const caesarShift = require("./shift.js");
+const fs = require("fs");
 
 module.exports = class Stream {
   constructor() {}
 
   static getReadbleStream(inputCommand) {
     if (inputCommand === undefined) {
-      console.log('Please write your text: ');
+      console.log("Please write your text: ");
       return process.stdin;
     }
-    return fs.createReadStream(inputCommand, 'utf8');
+    return fs.createReadStream(inputCommand, "utf8");
   }
 
   static getTransformStream(shift, action) {
@@ -24,7 +24,7 @@ module.exports = class Stream {
 
       _transform(chunk, encoding, callback) {
         try {
-          const stringChunk = chunk.toString('utf8');
+          const stringChunk = chunk.toString("utf8");
 
           const resultString = caesarShift(
             stringChunk,
@@ -47,7 +47,7 @@ module.exports = class Stream {
     if (outputCommand === undefined) {
       class WritableStream extends Writable {
         _write(chunk, encoding, callback) {
-          console.log('outputText:', chunk.toString());
+          console.log("outputText:", chunk.toString());
 
           callback();
         }
@@ -55,6 +55,6 @@ module.exports = class Stream {
       return new WritableStream({ highWaterMark: 2 });
     }
 
-    return fs.createWriteStream(outputCommand);
+    return fs.createWriteStream(outputCommand, { flags: "a" });
   }
 };
