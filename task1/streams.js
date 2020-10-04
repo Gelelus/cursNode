@@ -3,7 +3,6 @@ const caesarShift = require("./shift.js");
 const fs = require("fs");
 
 module.exports = class Stream {
-  constructor() {}
 
   static getReadbleStream(inputCommand) {
     if (inputCommand === undefined) {
