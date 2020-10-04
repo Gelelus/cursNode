@@ -15,6 +15,9 @@ CLI tool accept 4 options (short alias and full name):
 3.  **-o, --output**: an output file
 4.  **-a, --action**: an action encode/decode
 
+Entry point:
+- "./task1/index.js"
+
 Options description:
 ```bash
 $ node task1 --help

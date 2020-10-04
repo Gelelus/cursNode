@@ -25,19 +25,10 @@ function parseInteger(input){
   return int
 }
 
-function parseInteger(input){
-  const int = parseInt(input)
-  if (int === NaN){
-   errorHandler(`invalid input for shift - ${input}`)
-  } 
-  return int
-}
-
 function parsePath(path){
   if(!fs.existsSync(path)){
     errorHandler(`invalid file path - ${path}`)
   }
-
   return path
 }
 
